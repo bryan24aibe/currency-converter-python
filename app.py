@@ -28,4 +28,5 @@ def index():
     return render_template("index.html", exchange_rates=exchange_rates)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Run the Flask app on all available network interfaces
+    app.run(debug=True, host="0.0.0.0", port=5000)
